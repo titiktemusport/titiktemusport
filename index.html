@@ -9,18 +9,24 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* menghindari scroll */
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
       background-image: url('baground.png');
       background-size: cover;
       background-position: center;
-      height: 100vh;
       color: white;
-      font-family: 'Arial', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-align: center;
       position: relative;
     }
@@ -32,8 +38,7 @@
       animation: fadeUp 2s ease-in-out forwards;
       opacity: 0;
       transform: translateY(100px);
-      position: absolute;
-      top: 50px;
+      margin-top: 20px;
     }
 
     @keyframes fadeUp {
@@ -44,7 +49,7 @@
     }
 
     .button-group {
-      margin-top: 280px;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -53,6 +58,8 @@
       animation: fadeButtons 2.5s ease forwards;
       opacity: 0;
       transform: translateY(50px);
+      flex-grow: 1;
+      justify-content: center;
     }
 
     @keyframes fadeButtons {
@@ -71,8 +78,6 @@
       font-size: 1em;
       cursor: pointer;
       text-decoration: none;
-      opacity: 0;
-      transform: translateY(50px);
       animation: fadeButton 0.6s ease forwards;
       transition: all 0.5s ease;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
@@ -87,24 +92,24 @@
 
     .btn:hover {
       background-color: #d14e18;
-      transform: scale(1.2);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      transform: scale(1.1);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
     }
 
     .btn:active {
-      transform: scale(1) translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1) translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     }
 
     footer {
       width: 100%;
-      position: absolute;
-      bottom: 0;
       background-color: #EA5B24;
       padding: 10px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      bottom: 0;
     }
 
     .instagram {
@@ -121,13 +126,19 @@
       height: 20px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-height: 700px) {
       .logo-tts {
         width: 140px;
+        margin-top: 10px;
       }
 
       .button-group {
-        margin-top: 240px;
+        gap: 10px;
+      }
+
+      .btn {
+        font-size: 0.9em;
+        padding: 10px 16px;
       }
 
       .instagram {
@@ -142,17 +153,4 @@
 
   <div class="button-group">
     <a href="https://www.gelora.id/v/titiktemusport" class="btn">BOOKING</a>
-    <a href="https://maps.app.goo.gl/k7V1cbjhGunt8jqa9" target="_blank" class="btn">LOKASI</a>
-    <a href="https://wa.me/6287758610341" target="_blank" class="btn">WHATSAPP</a>
-    <a href="pricelist .jpg" class="btn">PRICELIST</a>
-  </div>
-
-  <footer>
-    <a href="https://www.instagram.com/tts_titiktemusport" class="instagram" target="_blank">
-      <img src="logo ig.png" alt="Instagram">
-      TTS_TITIKTEMUSPORT
-    </a>
-  </footer>
-
-</body>
-</html>
+    <a href="https://maps.app.goo.gl
